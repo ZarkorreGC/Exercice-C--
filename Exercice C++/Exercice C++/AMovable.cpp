@@ -7,17 +7,12 @@
 //
 //}
 
-//
-//Vector2 AMovable::Setdirection() {
-//
-//
-//}
-//
-//
-//
-//float AMovable::Setspeed(){
-//
-//
-//
-//
-//}
+Vector2 AMovable::Setdirection()
+{
+	return Vector2();
+}
+
+float AMovable::Setspeed()
+{
+	return 0.0f;
+}

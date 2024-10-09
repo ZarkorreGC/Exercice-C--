@@ -11,9 +11,9 @@ class Alive
 public:
 
 
-	//virtual float Get_max_live();
-	//virtual float Get_actual_live();
-	//virtual float Set_dommage();
+	virtual float Get_max_live();
+	virtual float Get_actual_live();
+	virtual float Set_dommage();
 
 
 };

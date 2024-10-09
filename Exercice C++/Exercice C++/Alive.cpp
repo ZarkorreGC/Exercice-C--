@@ -1,27 +1,23 @@
 #include "Alive.h"
 
-Alive::Alive() 
+
+
+Alive::Alive()
 {
-
-
 }
 
-//
-//float Alive::Get_actual_live() {
-//
-//
-//
-//
-//}
-//
-//float Alive::Get_max_live() {
-//
-//
-//
-//
-//}
-//
-//float Alive::Set_dommage(){
-//
-//
-//}
+float Alive::Get_max_live()
+{
+	return 0.0f;
+}
+
+float Alive::Get_actual_live()
+{
+	return 0.0f;
+}
+
+float Alive::Set_dommage()
+{
+	return 0.0f;
+}
+

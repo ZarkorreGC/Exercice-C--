@@ -4,20 +4,19 @@
 
 class Entity {
 
-protected:
-
     Vector2 position;
 
 
 public:
 
 
-    //Entity();
-    //Entity(float _position);
+    Entity();
+    Entity(float _position);
 
-    //virtual float Getpositionx();
 
-    //virtual void Setposition();
+    virtual float Getposition();
+
+    virtual void Setposition(float _position);
 
 };
 
