@@ -13,7 +13,6 @@ Entity::Entity(float _position)
 
 
 
-
 float Entity::Getposition()
 {
 	return position;
