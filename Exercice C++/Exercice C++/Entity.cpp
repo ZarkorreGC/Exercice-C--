@@ -6,9 +6,10 @@ Entity::Entity() : position(0.f, 0.f) {
 
 }
 
-Entity::Entity(float _position)
+Entity::Entity(float _position): position(_position)
 {
 }
+
 
 
 

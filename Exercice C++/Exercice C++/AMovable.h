@@ -6,13 +6,13 @@ class AMovable
 {
 	Vector2 Vect_unit_direct;
 	float vitesse;
-	AMovable(float);
+	AMovable(Vector2,float);
 
 public:
 
-	virtual Vector2 Setdirection();
-	virtual float Setspeed();
-	virtual void deplacer() = 0;
+	virtual void Setdirection(Vector2);
+	virtual void Setspeed(float);
+	virtual Vector2 deplacer() = 0;
 
 };
 
