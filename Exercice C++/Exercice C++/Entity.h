@@ -5,6 +5,8 @@
 
 class Entity {
 
+protected:
+
     Vector2 position;
 
 public:
@@ -12,6 +14,6 @@ public:
     Entity();
 
     virtual void Setposition(float x, float y);
-    virtual float Getposition();
+    virtual Vector2 Getposition();
 
 };

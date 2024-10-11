@@ -18,7 +18,7 @@ void AMovable::Setspeed(float _vitesse)
 	this->vitesse = _vitesse;
 }
 
-float AMovable::Getspeed()
+float AMovable::Getspeed() const
 {
     return vitesse;
 }

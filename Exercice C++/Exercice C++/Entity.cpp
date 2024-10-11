@@ -12,8 +12,8 @@ void Entity::Setposition(float x, float y)
 }
 
 
-float Entity::Getposition()
+Vector2 Entity::Getposition()
 {
-	return position;
+	return this->position;
 }
 

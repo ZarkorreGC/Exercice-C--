@@ -29,6 +29,13 @@ void Vector2::Setxy(float _x, float _y)
     this->y = _y;
 }
 
+void Vector2::Setxy(std::string _xStr, std::string _yStr)
+{
+	this->x = std::stof(_xStr);
+	this->y = std::stof(_yStr);
+
+}
+
 void Vector2::Setx(float _x)
 {
 
@@ -66,7 +73,7 @@ Vector2 Vector2::operator+(const Vector2& _right)
 	return tmp;
 }
 
-void Vector2::operator+=(const Vector2& _right)
+Vector2 Vector2::operator+=(const Vector2& _right)
 {
 	Vector2 tmp(this->x += _right.Getx(), this->y += _right.Gety());
 	return tmp;
@@ -78,7 +85,7 @@ Vector2 Vector2::operator-(const Vector2& _right)
 	return tmp;
 }
 
-void Vector2::operator-=(const Vector2& _right)
+Vector2 Vector2::operator-=(const Vector2& _right)
 {
 	Vector2 tmp(this->x -= _right.Getx(), this->y -= _right.Gety());
 	return tmp;
@@ -90,7 +97,7 @@ Vector2 Vector2::operator*(const Vector2& _right)
 	return tmp;
 }
 
-void Vector2::operator*=(const Vector2& _right)
+Vector2 Vector2::operator*=(const Vector2& _right)
 {
 	Vector2 tmp(this->x *= _right.Getx(), this->y *= _right.Gety());
 	return tmp;
