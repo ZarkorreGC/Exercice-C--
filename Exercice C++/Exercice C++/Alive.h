@@ -3,18 +3,23 @@
 
 class Alive
 {
-	float max_live;
-	float actual_live;
+	float max_life;
+	float actual_life;
 
-	Alive();
 
 public:
 
+	Alive();
+	Alive(float maxlife, float actuallife );
 
-	virtual float Get_max_live();
-	virtual float Get_actual_live();
-	virtual float Set_dommage();
+
+	void SetMaxlife(float maxlife);
+	void Setlife(float actuallife);
+
+
+	virtual float Get_max_life();
+	virtual float Get_actual_life();
+	virtual void Set_dommage(float dommage);
 
 
 };
-

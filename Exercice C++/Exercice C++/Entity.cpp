@@ -1,27 +1,19 @@
 #include "Entity.h"
 #include <iostream>
 
-Entity::Entity() : position(0.f, 0.f) {
-
+Entity::Entity() : position() {
 
 }
 
-Entity::Entity(float _position): position(_position)
+
+void Entity::Setposition(float x, float y)
 {
+	this->position.Setxy(x,y);
 }
-
-
-
 
 
 float Entity::Getposition()
 {
 	return position;
 }
-
-void Entity::Setposition(float _position)
-{
-	this->position = _position;
-}
-
 

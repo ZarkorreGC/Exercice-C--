@@ -4,7 +4,7 @@
 class IAttacker
 {
 public:
-	virtual Alive * attack() = 0 ;
+	virtual void attaquer(Alive* lifepoint) = 0 ;
 
 };
 

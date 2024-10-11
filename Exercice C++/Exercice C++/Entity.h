@@ -1,22 +1,17 @@
 #pragma once
-
+#include <iostream>
+#include <string>
 #include "Vector2.h"
 
 class Entity {
 
     Vector2 position;
 
-
 public:
 
-
     Entity();
-    Entity(float _position);
 
-
+    virtual void Setposition(float x, float y);
     virtual float Getposition();
 
-    virtual void Setposition(float _position);
-
 };
-

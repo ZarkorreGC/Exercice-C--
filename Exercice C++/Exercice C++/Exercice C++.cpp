@@ -3,25 +3,12 @@
 
 
 #include <iostream>
-#include "Vector2.h"
 
-//test
+
 
 int main()
 {
-
-    Vector2::Vector2(0.f, 0.f);
-
-    Vector2 myVecteurv1;
-    myVecteurv1.Setx(1);
-    myVecteurv1.Sety(5);
-    Vector2 myVecteurv2(1,1);
-    Vector2 myVecteurv3 = myVecteurv1 + myVecteurv2;
-
-
-    std::cout << "x : " << myVecteurv3.Getx() << std::endl;
-    std::cout << "y : " << myVecteurv3.Gety() << std::endl;
-
+    
 
 }
 

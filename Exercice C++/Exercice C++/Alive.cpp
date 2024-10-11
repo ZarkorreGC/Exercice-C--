@@ -2,22 +2,47 @@
 
 
 
-Alive::Alive()
+Alive::Alive() : max_life(o.f), actual_life(0.f)
 {
 }
 
-float Alive::Get_max_live()
+Alive::Alive(float maxlife, float actuallife) : max_life(0.f), actual_life(actuallife)
 {
-	return 0.0f;
 }
 
-float Alive::Get_actual_live()
+
+
+void Alive::SetMaxlife(float maxlife)
 {
-	return 0.0f;
+
+    max_life = maxlife;
+
 }
 
-float Alive::Set_dommage()
+void Alive::Setlife(float actuallife)
 {
-	return 0.0f;
+
+    actual_life = actuallife;
+
 }
 
+
+
+float Alive::Get_max_life()
+{
+    return max_life;
+}
+
+float Alive::Get_actual_life()
+{
+    return actual_life;
+}
+
+
+
+void Alive::Set_dommage(float dommage)
+{
+
+    actual_life -= dommage;
+
+}

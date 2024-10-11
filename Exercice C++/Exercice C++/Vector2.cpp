@@ -1,12 +1,16 @@
 #include "Vector2.h"
 #include <sstream>
 
+
+
 Vector2::Vector2() :x(0.f), y(0.f) {
 }
 
 Vector2::Vector2(float _x, float _y) : x(_x), y(_y) {
 
 }
+
+
 
 
 float Vector2::Getx() const {
@@ -19,12 +23,16 @@ float Vector2::Gety() const {
 	return this->y;
 }
 
-
-
-void Vector2::Setx(float _x) {
-
+void Vector2::Setxy(float x, float y)
+{    
 	this->x = _x;
+    this->y = _y;
+}
 
+void Vector2::Setx(float _x)
+{
+
+    this->x = _x;
 }
 
 void Vector2::Setx(std::string _xStr) {
@@ -33,11 +41,24 @@ void Vector2::Setx(std::string _xStr) {
 
 }
 
+
+
+
 void Vector2::Sety(float _y) {
 
 	y = _y;
 
 }
+
+void Vector2::Sety(std::string _yStr) {
+
+	this->y = std::stof(_yStr);
+
+}
+
+
+
+
 
 Vector2 Vector2::operator+(const Vector2& _right)
 {
@@ -45,23 +66,33 @@ Vector2 Vector2::operator+(const Vector2& _right)
 	return tmp;
 }
 
+void Vector2::operator+=(const Vector2& _right)
+{
+	Vector2 tmp(this->x += _right.Getx(), this->y += _right.Gety());
+	return tmp;
+}
 
+Vector2 Vector2::operator-(const Vector2& _right)
+{
+	Vector2 tmp(this->x - _right.Getx(), this->y - _right.Gety());
+	return tmp;
+}
 
+void Vector2::operator-=(const Vector2& _right)
+{
+	Vector2 tmp(this->x -= _right.Getx(), this->y -= _right.Gety());
+	return tmp;
+}
 
+Vector2 Vector2::operator*(const Vector2& _right)
+{
+	Vector2 tmp(this->x * _right.Getx(), this->y * _right.Gety());
+	return tmp;
+}
 
+void Vector2::operator*=(const Vector2& _right)
+{
+	Vector2 tmp(this->x *= _right.Getx(), this->y *= _right.Gety());
+	return tmp;
+}
 
-
-
-
-
-
-
-//
-//std::string Vector2::ToString() {
-//
-//    std::stringstream stream;
-//
-//    stream << "Position: x: " << x << ", y: " << y ;
-//
-//    return stream.str();
-//}

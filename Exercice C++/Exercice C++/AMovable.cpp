@@ -1,15 +1,16 @@
 #include "AMovable.h"
 
 
-AMovable::AMovable(Vector2 _Vect_unit_direct, float _vitesse) : Vect_unit_direct(0.f, 0.f), vitesse(_vitesse)
+AMovable::AMovable() : Vect_unit_direct(Vector2()), vitesse(1.f)
+{
+}
+AMovable::AMovable(float positionx, float positiony, float _vitesse) : Vect_unit_direct(Vector2(positionx,positiony)), vitesse(_vitesse)
 {
 }
 
-void AMovable::Setdirection(Vector2 _Vect_unit_direct)
+void AMovable::Setdirection(float x, float y)
 {
-
-	this->Vect_unit_direct = _Vect_unit_direct;
-
+	this->Vect_unit_direct.SetValue(x, y);
 }
 
 void AMovable::Setspeed(float _vitesse)
@@ -17,8 +18,7 @@ void AMovable::Setspeed(float _vitesse)
 	this->vitesse = _vitesse;
 }
 
-Vector2 AMovable::deplacer()
+float AMovable::Getspeed()
 {
-	return Vector2();
+    return vitesse;
 }
-
