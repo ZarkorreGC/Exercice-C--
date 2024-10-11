@@ -3,30 +3,33 @@
 
 
 #include <iostream>
-#include "StaticObject.h"
+#include "Alive.h"
+#include "AMovable.h"
+#include "IAttacker.h"
 #include "BreakableObject.h"
+#include "Entity.h"
 #include "Mob.h"
 #include "Player.h"
+#include "StaticObject.h"
+#include "Vector2.h"
+#include "World.h"
 
 
 
 int main()
 {
-    
-    StaticObject::StaticObject(5.f,5.f);
 
-    StaticObject mur;
 
-    //std::cout << mur.Getposition() << std::endl ;
+	StaticObject staticObj(0.f, 0.f);
+	BreakableObject breakableObject(0.f, 0.f, 1.f, 10.f);
 
-    BreakableObject::BreakableObject(6.f,6.f,10.f,10.f);
+	Vector2 mobdirection(0.f, 1.f);
+	Mob mob(0.f, 0.f, 15.f, 15.f, mobdirection);
 
-    //BreakableObject::Broken();
-
-    Vector2 depla_mob(1.f, 1.f);
-    Mob::Mob(5.f,6.f,15.f,15.f,depla_mob);
-    //Player::Player();
-
+	Vector2 playerdirection(0.0f, 1.0f);
+	Player player(1.f, 1.f, 10.f, 10.f ,playerdirection, 10.f);
+	player.deplacer();
+	player.Attaque(&mob);
 
 
 

@@ -3,8 +3,16 @@
 
 class IAttacker
 {
+
+protected:
+
+	float strength;
+
 public:
-	virtual void attaquer(Alive* lifepoint) = 0 ;
+
+	IAttacker(float _strength);
+
+	virtual void Attaque(Alive* target);
+
 
 };
-

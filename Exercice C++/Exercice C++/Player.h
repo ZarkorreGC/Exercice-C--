@@ -12,7 +12,7 @@ class Player : public Entity, public Alive, public AMovable, public IAttacker
 public:
 
 	Player();
-	Player(float positionx, float positiony, float maxlife, float actuallife, Vector2 deplacer);
+	Player(float positionx, float positiony, float maxlife, float actuallife, Vector2 deplacer, float _strength);
 
 
 	void Set_player_position(Vector2 playerposition);
@@ -22,6 +22,8 @@ public:
 	void Set_dommage(float damage) override;
 
 	void deplacer() override;
+
+	void Attaque(Alive* _Alive);
 
 	bool Dead() { return _Dead; }
 };
