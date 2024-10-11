@@ -3,12 +3,32 @@
 
 
 #include <iostream>
+#include "StaticObject.h"
+#include "BreakableObject.h"
+#include "Mob.h"
+#include "Player.h"
 
 
 
 int main()
 {
     
+    StaticObject::StaticObject(5.f,5.f);
+
+    StaticObject mur;
+
+    //std::cout << mur.Getposition() << std::endl ;
+
+    BreakableObject::BreakableObject(6.f,6.f,10.f,10.f);
+
+    //BreakableObject::Broken();
+
+    Vector2 depla_mob(1.f, 1.f);
+    Mob::Mob(5.f,6.f,15.f,15.f,depla_mob);
+    //Player::Player();
+
+
+
 
 }
 
