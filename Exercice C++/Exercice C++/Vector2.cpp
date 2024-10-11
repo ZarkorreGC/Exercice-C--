@@ -23,7 +23,7 @@ float Vector2::Gety() const {
 	return this->y;
 }
 
-void Vector2::Setxy(float x, float y)
+void Vector2::Setxy(float _x, float _y)
 {    
 	this->x = _x;
     this->y = _y;

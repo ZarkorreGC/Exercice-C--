@@ -2,7 +2,7 @@
 
 
 
-Alive::Alive() : max_life(o.f), actual_life(0.f)
+Alive::Alive() : max_life(0.f), actual_life(0.f)
 {
 }
 

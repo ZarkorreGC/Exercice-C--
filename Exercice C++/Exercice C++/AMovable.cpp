@@ -10,7 +10,7 @@ AMovable::AMovable(float positionx, float positiony, float _vitesse) : Vect_unit
 
 void AMovable::Setdirection(float x, float y)
 {
-	this->Vect_unit_direct.SetValue(x, y);
+	this->Vect_unit_direct.Setxy(x, y);
 }
 
 void AMovable::Setspeed(float _vitesse)
